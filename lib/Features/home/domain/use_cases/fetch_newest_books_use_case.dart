@@ -5,13 +5,13 @@ import '../../../../core/use_cases/use_case.dart';
 import '../entities/book_entity.dart';
 import '../repos/home_repo.dart';
 
-class FetchFeaturedBooksUseCase extends UseCase<List<BookEntity>, void> {
+class FetchNewestBooksUseCase extends UseCase<List<BookEntity>, void> {
   final HomeRepo homeRepo;
 
-  FetchFeaturedBooksUseCase(this.homeRepo);
+  FetchNewestBooksUseCase(this.homeRepo);
 
   @override
   Future<Either<Failure, List<BookEntity>>> call([void parm]) {
-    return homeRepo.fetchFeaturedBooks();
+    return homeRepo.fetchNewestBooks();
   }
 }
