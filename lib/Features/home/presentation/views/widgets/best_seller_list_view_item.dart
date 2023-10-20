@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../constants.dart';
-import '../../../../../core/utils/assets.dart';
+import '../../../../../core/utils/assets_manger.dart';
 import '../../../../../core/utils/styles.dart';
 import 'book_rating.dart';
 
@@ -29,7 +29,7 @@ class BookListViewItem extends StatelessWidget {
                     image: const DecorationImage(
                       fit: BoxFit.fill,
                       image: AssetImage(
-                        AssetsData.testImage,
+                        AssetsManger.testImage,
                       ),
                     )),
               ),

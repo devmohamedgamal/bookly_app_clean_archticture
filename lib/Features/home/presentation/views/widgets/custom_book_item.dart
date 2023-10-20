@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/assets.dart';
+import '../../../../../core/utils/assets_manger.dart';
 
 class CustomBookImage extends StatelessWidget {
   const CustomBookImage({Key? key}) : super(key: key);
@@ -16,7 +16,7 @@ class CustomBookImage extends StatelessWidget {
             image: const DecorationImage(
               fit: BoxFit.fill,
               image: AssetImage(
-                AssetsData.testImage,
+                AssetsManger.testImage,
               ),
             )),
       ),

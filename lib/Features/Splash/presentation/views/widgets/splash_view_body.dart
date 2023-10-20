@@ -1,5 +1,5 @@
 import '../../../../../core/utils/app_router.dart';
-import '../../../../../core/utils/assets.dart';
+import '../../../../../core/utils/assets_manger.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -39,7 +39,7 @@ class _SplashViewbodyState extends State<SplashViewbody>
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Image.asset(AssetsData.logo),
+        Image.asset(AssetsManger.logo),
         const SizedBox(
           height: 4,
         ),
