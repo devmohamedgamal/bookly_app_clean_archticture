@@ -19,12 +19,12 @@ class BookModel extends BookEntity {
     this.id,
     this.etag,
     this.selfLink,
-   required this.volumeInfo,
+    required this.volumeInfo,
     this.saleInfo,
     this.accessInfo,
     this.searchInfo,
   }) : super(
-    bookId: id!,
+          bookId: id!,
           image: volumeInfo.imageLinks?.thumbnail ?? "",
           title: volumeInfo.title!,
           autherName: volumeInfo.authors?.first ?? "Unknown",
@@ -37,9 +37,8 @@ class BookModel extends BookEntity {
         id: json['id'] as String?,
         etag: json['etag'] as String?,
         selfLink: json['selfLink'] as String?,
-        volumeInfo: json['volumeInfo'] == null
-            ? null
-            : VolumeInfo.fromJson(json['volumeInfo'] as Map<String, dynamic>),
+        volumeInfo:
+            VolumeInfo.fromJson(json['volumeInfo'] as Map<String, dynamic>),
         saleInfo: json['saleInfo'] == null
             ? null
             : SaleInfo.fromJson(json['saleInfo'] as Map<String, dynamic>),
@@ -56,7 +55,7 @@ class BookModel extends BookEntity {
         'id': id,
         'etag': etag,
         'selfLink': selfLink,
-        'volumeInfo': volumeInfo?.toJson(),
+        'volumeInfo': volumeInfo.toJson(),
         'saleInfo': saleInfo?.toJson(),
         'accessInfo': accessInfo?.toJson(),
         'searchInfo': searchInfo?.toJson(),
